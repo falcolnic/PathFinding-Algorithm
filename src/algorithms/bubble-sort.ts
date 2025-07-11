@@ -1,5 +1,5 @@
 import { colors, sortingSpeed, barColorWhileSwapping } from "../variables/stores";
-import { endSorting, getBarsWhichArentNull, playSortSound, refreshBars } from "./algo-utils";
+import { endSorting, getBarsWhichArentNull, playSortSound, refreshBars, startTimer } from "./algo-utils";
 
 let color:string;
 colors.subscribe(value => {
@@ -13,6 +13,7 @@ sortingSpeed.subscribe(value => {
 export async function bubbleSort() {
     let barsToSortArray:HTMLDivElement[] = getBarsWhichArentNull();
     refreshBars();
+    startTimer();
     let swapped:boolean;
     do {
         swapped = false;

@@ -21,7 +21,7 @@ function makeAPICall(position) {
         console.log(data.current_weather.temperature);
     })
     .catch(error => {
-        console.log("weather api call failed!")
+        console.log(`weather api call failed! ${error}`)
     });
 }
 getLocation();

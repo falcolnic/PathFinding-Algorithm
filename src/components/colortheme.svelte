@@ -8,23 +8,24 @@
   });
 
   function setSuitableIcon(): void {
-    let colorTheme: string = localStorage.getItem("colorTheme");
+    let colorTheme: string = localStorage.getItem("colorTheme") ?? "light";
     if (colorTheme === "light") {
-      colorModeIcon.update(value => colorModeIconLight);
+      colorModeIcon.update(() => colorModeIconLight);
     } else if (colorTheme === "dark") {
-      colorModeIcon.update(value => colorModeIconDark);
+      colorModeIcon.update(() => colorModeIconDark);
     } else {
-      colorModeIcon.update(value => colorModeIconLight);
+      colorModeIcon.update(() => colorModeIconLight);
     }
   }
+
   function changeColorTheme() {
     if (localStorage.getItem("colorTheme") == "dark") {
-      colors.update(value => colorLight);
-      colorModeIcon.update(value => colorModeIconLight);
+      colors.update(() => colorLight);
+      colorModeIcon.update(() => colorModeIconLight);
       localStorage.setItem("colorTheme", "light");
     } else {
-      colors.update(value => colorDark);
-      colorModeIcon.update(value => colorModeIconDark);
+      colors.update(() => colorDark);
+      colorModeIcon.update(() => colorModeIconDark);
       localStorage.setItem("colorTheme", "dark");
     }
   }

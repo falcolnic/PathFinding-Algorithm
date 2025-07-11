@@ -1,4 +1,4 @@
-import cfg from './config';
+import cfg from './config.json';
 
 function log(message: any) {
     if (cfg.debug) {

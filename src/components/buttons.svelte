@@ -5,14 +5,14 @@
   import { colors } from "../variables/stores";
   import { generateBars } from "./bars.svelte";
 
-  export let buttonCreateBars:HTMLButtonElement = null;
-  export let buttonBubbleSort:HTMLButtonElement = null;
-  export let buttonInsertionSort:HTMLButtonElement = null;
-  export let buttonSelectionSort:HTMLButtonElement = null;
+  export let buttonCreateBars: HTMLButtonElement | null = null;
+  export let buttonBubbleSort: HTMLButtonElement | null = null;
+  export let buttonInsertionSort: HTMLButtonElement | null = null;
+  export let buttonSelectionSort: HTMLButtonElement | null = null;
 
   function createCertainAmountOfBars():void{
-    let userInput:string = prompt("Please enter a number:");
-    if (isFinite(+userInput) && userInput !== "" && userInput !== null) {
+    let userInput: string | null = prompt("Please enter a number:");
+    if (userInput !== null && isFinite(+userInput) && userInput !== "") {
       generateBars(+userInput);
     } else if (userInput == null) {
       alert("Process canceled!");

@@ -1,5 +1,5 @@
 import { colors, sortingSpeed, barColorWhileSwapping } from "../variables/stores";
-import { endSorting, getBarsWhichArentNull, playSortSound, refreshBars } from "./algo-utils";
+import { endSorting, getBarsWhichArentNull, playSortSound, refreshBars, startTimer } from "./algo-utils";
 
 let color:string;
 colors.subscribe(value => {
@@ -14,6 +14,7 @@ sortingSpeed.subscribe(value => {
 export async function selectionSort() {
     let barsToSortArray:HTMLDivElement[] = getBarsWhichArentNull();
     refreshBars();
+    startTimer();
     let marker:number = barsToSortArray.length - 1;
     while(marker >= 0){
         let max:number = 0;

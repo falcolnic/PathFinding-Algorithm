@@ -17,6 +17,12 @@ const minHeight:number = 50;
 const firstSorting:Writable<string> = writable("true");
 const delayEndSorting:number = 30;
 
+const sortStartTime:Writable<number> = writable(0);
+const sortEndTime:Writable<number> = writable(0);
+const sortDuration:Writable<string> = writable("0.000");
+const isCurrentlySorting:Writable<boolean> = writable(false);
+
+
 const typewritterSpeed:number = 40;
 const headingAsString:string = "how sorting works.";
 const headingBegin:string = "See";
@@ -27,7 +33,7 @@ const scrollbarStep:string = "5.0";
 const scrollbarValue:string = "75";
 
   function init():void {
-    let colorTheme:string = localStorage.getItem("colorTheme");
+    let colorTheme: string | null = localStorage.getItem("colorTheme");
     if(colorTheme === "light") {
       colors.update(value => colorLight)
     } else if(colorTheme === "dark") {
@@ -39,4 +45,4 @@ const scrollbarValue:string = "75";
     sortingSpeed.update(value => "75");
   }
   init();
-export { delayEndSorting, barColorEndSorting, scrollbarMax, scrollbarMin, scrollbarStep, scrollbarValue, colorLight, colorDark, barsStore, typewritterSpeed, headingAsString, headingBegin, colors, colorModeIcon, colorModeIconDark, colorModeIconLight, maxHeight, minHeight, sortingSpeed, firstSorting, barColorWhileSwapping };
+export { delayEndSorting, barColorEndSorting, scrollbarMax, scrollbarMin, scrollbarStep, scrollbarValue, colorLight, colorDark, barsStore, typewritterSpeed, headingAsString, headingBegin, colors, colorModeIcon, colorModeIconDark, colorModeIconLight, maxHeight, minHeight, sortingSpeed, firstSorting, barColorWhileSwapping, sortStartTime, sortEndTime, sortDuration, isCurrentlySorting };

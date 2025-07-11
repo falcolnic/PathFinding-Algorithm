@@ -6,6 +6,7 @@
   import SpeedScrollbar from "./components/speedscrollbar.svelte";
   import Colortheme from "./components/colortheme.svelte";
   import Weather from "./components/weather.svelte";
+  import Timer from "./components/Timer.svelte";
   window.addEventListener("mouseover", typewriteHeading);
 </script>
 
@@ -13,6 +14,7 @@
   <Heading/>
   <Buttons/> <Colortheme/>
   <SpeedScrollbar/>
+  <Timer/>
 </div>
 <Bars/>
 <Weather/>
