@@ -4,7 +4,7 @@ A dynamic and interactive web application built with Svelte and TypeScript that 
 
 ## 🚀 Features
 
-- **Multiple Sorting Algorithms**: Bubble Sort, Insertion Sort, and Selection Sort
+- **Multiple Sorting Algorithms**: Bubble Sort, Insertion Sort, and Selection Sort[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
 - **Real-time Visualization**: Watch bars animate as they get sorted
 - **Speed Control**: Adjust sorting speed with an interactive slider (faster/slower)
 - **Dark/Light Theme**: Toggle between color themes with persistent storage
@@ -115,3 +115,5 @@ The application includes sound effects stored in [`src/assets/`](src/assets/):
 ## 🌍 Weather Integration
 
 The application fetches weather data using the Open-Meteo API based on the user's geolocation. This feature requires permission to access location data.
+
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
